@@ -8,21 +8,35 @@
 </head>
 <body>
     <script type="text/javascript">
-        function Leer (mensaje)
+        function Leer(mensaje)
         {
             return parseInt(prompt(mensaje))
         }
-
-        var numero = Leer("Escriba su nota: ")
-        if (nota < 5) {
-            console.log('Suspendido, tiene que estudiar más.')
-        } else if (nota => 5 && nota < 7) {
-            console.log('Aprobado, pero tiene que estudiar más.')
-        } else if (nota => 7 && nota < 8) {
-            console.log('Notable, bien hecho.')
-        } else if (nota => 8 && nota < 9) {
-            console.log('Notable alto, sigue así.')
-        } else if (nota)
+        //parseInt transforma de parse a Int
+        //parseFloat por lo tanto también transforma de parse a Float
+        var nota = Leer("Escriba su nota: ");
+        if (nota < 5)
+        {
+            console.log('Suspendido, tiene que estudiar más.');
+        }
+        else if (nota >= 5 && nota < 7)
+        {
+            console.log('Aprobado, pero tiene que estudiar más.');
+        }
+        else if (nota >= 7 && nota < 8) {
+            console.log('Notable, bien hecho.');
+        }
+        else if (nota >= 8 && nota < 9) {
+            console.log('Notable alto, sigue así.');
+        }
+        else if (nota >=9 && nota < 10)
+        {
+            console.log('¡Sobresaliente! ');
+        }
+        else if (nota == 10)
+        {
+            console.log('Matrícula de honor, estas hecho un pantera');
+        }
     </script>
 </body>
 </html>

@@ -11,9 +11,27 @@
             //var expresionRegular=/ab12/
             // * 0 o más veces el carácter precedente:
             //var expresionRegular=/abz*2/  // reconoce ab2, abz2, abzzzz2
+            // + 1 o más veces el carácter precedente:
+            //var expresionRegular=/abz+2/  // reconoce abz2, abzzzz2
             // \ toma el carácter tal cual sin significado especial:
-            var expresionRegular=/abz\/\*2/ // reconoce abz/*2
+            //var expresionRegular=/abz\/\*2/ // reconoce abz/*2
+            //var expresionRegular=/abz\*2/ // reconoce abz*2
+            // ^ la expresión tiene que estar al principio de la cadena:
+            //var expresionRegular=/^abz/ // reconoce abz, abzasdfasd; no reconoce asdfa abz asdf
+            // $ la expresión tiene que estar al final de la cadena:
+            //var expresionRegular=/abz$/ // reconoce abz, asdfabz; no reconoce asdfa abz asdf
+            // ? el carácter precedente aparece 0 o 1 vez:
+            //var expresionRegular=/a?bz/ // reconoce abz, bz, acbz; lo importante es que está bz, la a es opcional
+            // . cualquier carácter es válido:
+            var expresionRegular=/a.bz/ // reconoce axbz, a0bz, arbz...
+            // [abcdef] grupo de caracteres, se reconoce sólo uno de ellos cada vez:
+            var expresionRegular=/rs[12345]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
+            // [a-f] equivale al ejemplo anterior, se reconoce sólo uno de ellos cada vez:
+            var expresionRegular=/rs[1-5]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
             
+
+            // La función test comprueba si la cadena que se le pasa
+            // encaja en la expresión regular utilizada.
             if(!expresionRegular.test(formulario.nombre.value))
             {
                 alert('No coincide.');

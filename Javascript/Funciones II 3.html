@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Anonymous functions</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             * La idea de esta secci�n es que pruebes de una forma muy sencilla 
+             * las diferentes formas de definir funciones
+             * y ejecutarlas con un valor de retorno
+             */
+            var sayHello = function(name = 'world') {
+                return `Hello ${name}`
+            }
+            console.log(sayHello())
+            console.log(sayHello('Cristina'))
+
+            function ejemplo(ciudad)
+            {
+                return 'Su ciudad es: '+ ciudad;
+            }
+
+            var ciudad = 'Sevilla'
+            var resultado = ejemplo(ciudad)
+            console.log(resultado)
+
+        </script>
+    </body>
+</html>

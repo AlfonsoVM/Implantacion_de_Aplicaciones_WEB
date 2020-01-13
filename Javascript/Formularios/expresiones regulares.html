@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+</head>
+<body>
+    <script type="text/javascript">
+        function Valida(formulario)
+        {
+            // Cadena exacta independiente posición:
+            //var expresionRegular=/ab12/
+            // * 0 o más veces el carácter precedente:
+            //var expresionRegular=/abz*2/  // reconoce ab2, abz2, abzzzz2
+            // \ toma el carácter tal cual sin significado especial:
+            var expresionRegular=/abz\/\*2/ // reconoce abz/*2
+            
+            if(!expresionRegular.test(formulario.nombre.value))
+            {
+                alert('No coincide.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form name="formulario2" action="mailto:correo@correo.com"
+    onsubmit="return Valida(this);">
+        Nombre: <input type="text" name="nombre">
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
+</body>
+</html>

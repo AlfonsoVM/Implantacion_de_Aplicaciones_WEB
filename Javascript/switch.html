@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Logic</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             * Tabla de multiplicar
+             */
+            var expr = prompt("Escriba una fruta: ")
+            switch (expr) {
+                case 'Naranja':
+                    console.log('El kilogramo de Naranjas cuesta $0.59.');
+                break;
+                case 'Manzana':
+                    console.log('El kilogramo de Manzanas cuesta $0.32.');
+                break;
+                case 'Banana':
+                    console.log('El kilogramo de Bananas cuesta $0.48.');
+                break;
+                case 'Cereza':
+                    console.log('El kilogramo de Cerezas cuesta $3.00.');
+                break;
+                case 'Mango':
+                    console.log('Otras tareas que habría que hacer con mango');
+                case 'Papaya':
+                    console.log('El kilogramo de Mangos y Papayas cuesta $2.79.');
+                break;
+                default:
+                    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+            }
+            console.log("¿Hay algo más que te quisiera consultar?");
+        </script>
+    </body>
+</html>

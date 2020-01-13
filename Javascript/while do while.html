@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Logic</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            var secreto= -1;
+            secreto=parseInt(prompt("Escriba un número secreto entre 0 y 10."));
+            
+            while(isNaN(secreto) || secreto < 0 || secreto >10)
+            {
+                secreto=parseInt( prompt("El número no está entre 0 y 10, por favor escriba un número secreto entre 0 y 10."));
+            }
+            var descubierto=false;
+            do{
+                var numero = parseInt(prompt("El número secreto no está descubierto, ¿Cuál es el número secreto entre 0 y 10?"));
+                if(secreto == numero)
+                {
+                    descubierto = true;
+                    console.log("Número secreto descubierto: "+secreto);
+                }
+            }while(!descubierto)
+        </script>
+    </body>
+</html>

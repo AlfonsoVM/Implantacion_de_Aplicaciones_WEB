@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Java</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Registro(formulario)
+        {
+            var expresionNombre=/ /
+            var expresionApellidos=/ /
+            var expresionDireccion=/ /
+            var expresionTelefono=/ /
+            var expresionCorreo=/ /
+            var expresionOcupacion=/ /
+            var expresionCp=/ /
+            var expresionCiudad=/ /
+
+            if (
+                    !expresionNombre.test(formulario.nombre.value) ||
+                    !expresionApellidos.test(formulario.apellidos.value) ||
+                    !expresionDireccion.test(formulario.direccion.value) ||
+                    !expresionTelefono.test(formulario.telefono.value) ||
+                    !expresionCorreo.test(formulario.correo.value) ||
+                    !expresionOcupacion.test(formulario.ocupacion.value) ||
+                    !expresionCp.test(formulario.cp.value) ||
+                    !expresionCiudad.test(formulario.ciudad.value)
+                )
+            {
+                alert('No coincide.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form name="formulario2" action="mailto:correo@correo.com" 
+    onsubmit="return Registro(this);">
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellidos:</td>
+                <td><input type="text" name="apellidos"></td>
+            </tr>
+            <tr>
+                <td>Dirección:</td>
+                <td><input type="text" name="direccion"></td>
+            </tr>
+            <tr>
+                <td>Teléfono:</td>
+                <td><input type="text" name="telefono"></td>
+            </tr>
+            <tr>
+                <td>Correo Electrónico:</td>
+                <td><input type="text" name="correo"></td>
+            </tr>
+            <tr>
+                <td>Ocupación:</td>
+                <td><input type="text" name="ocupacion"></td>
+            </tr>
+            <tr>
+                <td>Código Postal:</td>
+                <td><input type="text" name="cp"></td>
+            </tr>
+            <tr>
+                <td>Ciudad:</td>
+                <td>
+                    <select name="ciudad">
+                    <option value="1">Sevilla</option>
+                    <option value="2">Huelva</option>
+                    <option value="3">Cádiz</option>
+                    <option value="4">Córdoba</option>
+                    <option value="5">Málaga</option>
+                    <option value="6">Jaén</option>
+                    <option value="7">Granada</option>
+                    <option value="8">Almería</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" value="Enviar" name="enviar"></td>
+                <td></td>
+            </tr>            
+        </table>
+    </form>
+</body>
+</html>

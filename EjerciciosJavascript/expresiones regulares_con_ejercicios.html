@@ -23,11 +23,24 @@
             // ? el carácter precedente aparece 0 o 1 vez:
             //var expresionRegular=/a?bz/ // reconoce abz, bz, acbz; lo importante es que está bz, la a es opcional
             // . cualquier carácter es válido:
-            //var expresionRegular=/a.bz/ // reconoce axbz, a0bz, arbz...
+            var expresionRegular=/a.bz/ // reconoce axbz, a0bz, arbz...
             // [abcdef] grupo de caracteres, se reconoce sólo uno de ellos cada vez:
-            //var expresionRegular=/rs[12345]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
+            var expresionRegular=/rs[12345]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
             // [a-f] equivale al ejemplo anterior, se reconoce sólo uno de ellos cada vez:
-            //var expresionRegular=/rs[1-5]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
+            var expresionRegular=/rs[1-5]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
+            
+            // -Nº2LETRAS3caracteres-
+            var expresionRegular=/^\-[0-9][a-z]{2}.{3}\-$/
+
+            // Matrícula formato actual 0000-XYZ
+            var expresionRegular=/^[0-9]{4}\-[A-Z]{3}$/
+
+            // TELÉFONO = 9 Dígitos
+            var expresionRegular=/^[0-9]{9}$/
+
+            //14 de Enero de 2020
+
+             //var expresionRegular=/rs[1-5]t/ // reconoce rs1t, rs2t, rs3t; no reconoce rs23t
             // [^a-f] equivale al ejemplo anterior, pero al contrario se reconoce cualquier carácter que no esté en la lista:
             //var expresionRegular=/rs[^1-5]t/ // reconoce rsqt, rs9t, rs@t; no reconoce rs23t
             // {n} el carácter precedente se repite n veces:
@@ -45,7 +58,10 @@
             var expresionRegular=/abc\b/
 
             //var expresionRegular=/^\-[0-9][a-z]{2}.{3}\-$/
-            
+
+            // Correo Electrónico --> 40 carácteres @ 
+
+            var expresionRegular=/^\w+@\w+(\.\w+)+$/
 
             // La función test comprueba si la cadena que se le pasa
             // encaja en la expresión regular utilizada.

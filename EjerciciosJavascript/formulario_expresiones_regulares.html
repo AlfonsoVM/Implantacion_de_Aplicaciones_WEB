@@ -10,14 +10,14 @@
     <script type="text/javascript">
         function Registro(formulario)
         {
-            var expresionNombre=/ /
-            var expresionApellidos=/ /
-            var expresionDireccion=/ /
-            var expresionTelefono=/ /
-            var expresionCorreo=/ /
-            var expresionOcupacion=/ /
-            var expresionCp=/ /
-            var expresionCiudad=/ /
+            var expresionNombre=/^([a-zñáéíóúA-Z]+[\s]*)+$/
+            var expresionApellidos=/^([a-zñáéíóúA-Z]+[\s]*)+$/
+            var expresionDireccion=/^([a-zñáéíóúA-Z0-9]+[\s]*)+$/
+            var expresionTelefono=/^[0-9]{9}$/
+            var expresionCorreo=/^\w+.+@\w+(\.\w+)+$/
+            var expresionOcupacion=/^([a-zñáéíóúA-Z]+[\s]*)+$/
+            var expresionCp=/^[0-9]{5}$/
+            //var expresionCiudad=/a-zA-Z/
 
             if (
                     !expresionNombre.test(formulario.nombre.value) ||
@@ -26,17 +26,19 @@
                     !expresionTelefono.test(formulario.telefono.value) ||
                     !expresionCorreo.test(formulario.correo.value) ||
                     !expresionOcupacion.test(formulario.ocupacion.value) ||
-                    !expresionCp.test(formulario.cp.value) ||
-                    !expresionCiudad.test(formulario.ciudad.value)
+                    !expresionCp.test(formulario.cp.value)
+                    // || !expresionCiudad.test(formulario.ciudad.value)
                 )
-            {
-                alert('No coincide.');
-                return false;
-            }
-            return true;
+                {
+                    alert('No coincide.');
+                    return false;
+                } else 
+                {
+                return true;
+                }
         }
     </script>
-    <form name="formulario2" action="mailto:correo@correo.com" 
+    <form name="formulario" action="mailto:correo@correo.com" 
     onsubmit="return Registro(this);">
         <table>
             <tr>
@@ -83,7 +85,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="text" value="Enviar" name="enviar"></td>
+                <td><input type="submit" value="Enviar" name="enviar"></td>
                 <td></td>
             </tr>            
         </table>

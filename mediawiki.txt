@@ -1,0 +1,9 @@
+Media wiki:
+Documento con capturas de pantalla de las
+siguientes tareas:
+- Cambiar el logo de la wiki.
+- Creación de 5 usuarios de los cuales serán 1 administrador,1burócrata, 1 bot
+- Creación desde cada usuario de 1 página.
+- En al menos una págia aplicar un ejemplo de cada estilo, lista, tabla, imagen, enlace formato de texto, etc
+- Bloquear un usuario.
+- Mostrar la lista de contribuciones de los usuarios.

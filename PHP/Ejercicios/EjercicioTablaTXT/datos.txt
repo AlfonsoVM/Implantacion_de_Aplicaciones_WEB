@@ -1,0 +1,4 @@
+cantidad    precio  total
+    3         10      
+    5         22      
+    106        3      

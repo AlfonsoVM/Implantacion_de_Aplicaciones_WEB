@@ -1,4 +1,4 @@
 Cantidad,Precio,Total,
 3,10,x,
 5,22,x,
-106,3,x,
+106,3,x

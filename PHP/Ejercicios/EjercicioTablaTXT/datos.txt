@@ -1,4 +1,4 @@
-cantidad    precio  total
-    3         10      
-    5         22      
-    106        3      
+Cantidad,Precio,Total,
+3,10,x,
+5,22,x,
+106,3,x,

@@ -1,0 +1,3 @@
+Cantidad,Precio,Total,
+106,4,x,
+44321,123,z
